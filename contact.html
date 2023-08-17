@@ -516,26 +516,27 @@
         <title>Email Inquiry Form</title>
 
         <style>
-        
             /* 폼의 전체 너비와 최대 너비 지정 */
+            .form-wrapper{
+                display: flex;
+                justify-content: center;
+            }
             form {
                 width: 900px;
                 max-width: 100%;
                 padding: 20px;
-                margin-left: 25.5%;
+                /* margin-left: 25.5%; */
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-                justify-content: center ;
-                align-items: center ;
             }
-    
+        
             /* 레이블과 입력 요소 사이 여백 조정 */
-            label, input, textarea {
+            label {
                 display: block;
                 margin-bottom: 10px;
             }
-    
+        
             /* 입력 요소 폭 설정 */
             input[type="text"],
             input[type="tel"],
@@ -546,10 +547,9 @@
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 box-sizing: border-box;
-                justify-content: center;
-                align-items: center;
+                text-align: left;
             }
-    
+        
             /* 전송 버튼 스타일링 */
             input[type="submit"] {
                 background-color: #5B2481;
@@ -559,14 +559,34 @@
                 border-radius: 5px;
                 cursor: pointer;
                 align-self: flex-end;
+                margin-top: 10px; /* 전송 버튼 위 여백 추가 */
             }
-    
+        
             /* 전송 버튼 호버 효과 */
             input[type="submit"]:hover {
                 background-color: #723A98;
             }
-        </style>
+        
+            /* 이름과 전화번호를 한 줄에 표시 */
+            .name-phone,
+            .email,
+            .message {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
+            
+            /* 이름과 전화번호 입력 요소 너비 설정 */
+            #name,
+            #phone {
+                width: 38%; /* 각각의 입력 요소가 반 너비씩 차지하도록 조정 */
+            }
+            #email,
+            #message{
+                width: 92%;
+            }
+        </style>
         <script type="text/javascript">
             function check() {
                 var name = document.getElementById("name").value;
@@ -604,7 +624,10 @@
                     document.getElementById("message").focus();
                     return false;
                 }
-    
+                document.getElementsByName("frAttachFiles")[0].onload = function() {
+                    alert("이메일 전송이 완료되었습니다. 감사합니다!");
+                };
+                
                 return true;
             }
         </script>
@@ -614,30 +637,36 @@
         <div id="contact_2" class="product mt70">
             <h1>상담문의</h1>
             <p class="sub_con">
-                <div>
+                <div class="form-wrapper">
                 <form name="inquiryForm"  method="post" 
-                action="https://script.google.com/macros/s/AKfycbzYDi1PbiqDU_O2mVz_SCUBuG0NOJoNLR01ZF4SLi2P-v63Sx8hfUlK8BVDihxv9MEo/exec" 
+                action="https://script.google.com/macros/s/AKfycbzEEZmw0LNUjv0qpMoKo4aK1OjyDosgNu6FZcolN90F11u_xStMoMD_yL6chUH4JSt-Gg/exec"                
                 target="frAttachFiles" onsubmit="return check();">
-                    
+                <p>&nbsp;</p>
+                <div class="name-phone">
                     <label for="name">성함:</label>
                     <input type="text" id="name" name="name" required>
-            
+                
                     <label for="phone">전화번호:</label>
                     <input type="tel" id="phone" name="phone" required>
-            
+                </div>
+                <p>&nbsp;</p>
+                <div class ="email">
                     <label for="email">이메일:</label>
                     <input type="email" id="email" name="email" required>
-            
-                    <br>
+                </div>
+                <p>&nbsp;</p>
+                <div class="message">
+             
                     <label for="message">문의 내용:</label><br>
                     <textarea id="message" name="message" rows="6" cols="200" required></textarea>
-            
+                </div>
                     <br>
                     <input type="submit" value="문의하기">
                 </form>
-            </div>
+               
+            </div> 
+            <iframe name="frAttachFiles" style="display:none;"></iframe>
             </p>
-            
             <!--// tabs menu -->
             <div class="product_menu"></div>
 
