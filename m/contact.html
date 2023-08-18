@@ -177,7 +177,7 @@
 
         </div>
         <!-- END map //-->
-
+<!-- 
         <div id="about_7" class="contact map">
             <div class="about_title">
                 <h1>상담문의</h1>
@@ -186,7 +186,165 @@
                 </div>
             </div>
       
+        </div> -->
+        <title>Email Inquiry Form</title>
+
+        <style>
+            /* 폼의 전체 너비와 최대 너비 지정 */
+            .form-wrapper{
+                display: flex;
+                justify-content: center;
+            }
+            form {
+                width: 900px;
+                max-width: 100%;
+                padding: 20px;
+                /* margin-left: 25.5%; */
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            }
+        
+            /* 레이블과 입력 요소 사이 여백 조정 */
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+        
+            /* 입력 요소 폭 설정 */
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                text-align: left;
+            }
+        
+            /* 전송 버튼 스타일링 */
+            input[type="submit"] {
+                background-color: #5B2481;
+                color: #ffffff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                align-self: flex-end;
+                margin-top: 10px; /* 전송 버튼 위 여백 추가 */
+            }
+        
+            /* 전송 버튼 호버 효과 */
+            input[type="submit"]:hover {
+                background-color: #723A98;
+            }
+        
+            /* 이름과 전화번호를 한 줄에 표시 */
+            .name-phone,
+            .email,
+            .message {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            
+            /* 이름과 전화번호 입력 요소 너비 설정 */
+            #name,
+            #phone {
+                width: 76%; /* 각각의 입력 요소가 반 너비씩 차지하도록 조정 */
+            }
+            #email,
+            #message{
+                width: 76%;
+            }
+        </style>
+        <script type="text/javascript">
+            function check() {
+                var name = document.getElementById("name").value;
+                var phonenumber = document.getElementById("phonenumber").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+    
+                if (name.trim() === "") {
+                    alert("성함을 입력해주세요.");
+                    document.getElementById("name").focus();
+                    return false;
+                }
+    
+                if (phonenumber.trim() === "") {
+                    alert("전화번호를 입력해주세요.");
+                    document.getElementById("phonenumber").focus();
+                    return false;
+                }
+    
+                if (email.trim() === "") {
+                    alert("이메일을 입력해주세요.");
+                    document.getElementById("email").focus();
+                    return false;
+                } else {
+                    var exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+                    if (!exptext.test(email)) {
+                        alert("입력한 이메일 형식이 올바르지 않습니다.");
+                        document.getElementById("email").focus();
+                        return false;
+                    }
+                }
+    
+                if (message.trim() === "") {
+                    alert("문의 내용을 입력해주세요.");
+                    document.getElementById("message").focus();
+                    return false;
+                }
+                document.getElementsByName("frAttachFiles")[0].onload = function() {
+                    alert("이메일 전송이 완료되었습니다. 감사합니다!");
+                };
+                
+                return true;
+            }
+        </script>
+        <div id="contact_2" class="product mt70">
+            <h1>상담문의  <p>&nbsp;</p>  <p>&nbsp;</p></h1>
+            <p class="sub_con">
+                <div class="form-wrapper">
+                <form name="inquiryForm"  method="post" 
+                action="https://script.google.com/macros/s/AKfycbzEEZmw0LNUjv0qpMoKo4aK1OjyDosgNu6FZcolN90F11u_xStMoMD_yL6chUH4JSt-Gg/exec"                
+                target="frAttachFiles" onsubmit="return check();">
+                <p>&nbsp;</p>
+                <div class="name-phone">
+                    <label for="name">성함:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <p>&nbsp;</p>
+                <div class="name-phone">
+                    <label for="phone">전화번호:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <p>&nbsp;</p>
+                <div class ="email">
+                    <label for="email">이메일:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <p>&nbsp;</p>
+                <div class="message">
+             
+                    <label for="message">문의 내용:</label><br>
+                    <textarea id="message" name="message" rows="6" cols="200" required></textarea>
+                </div>
+                    <br>
+                    <input type="submit" value="문의하기">
+                </form>
+               
+            </div> 
+            <iframe name="frAttachFiles" style="display:none;"></iframe>
+            </p>
+            <!--// tabs menu -->
+            <div class="product_menu"></div>
+
         </div>
+
 
     </div>
     <!-- END contents //-->
