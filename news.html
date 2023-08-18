@@ -145,6 +145,28 @@
             App.init();
         });
     </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function adjustIframeHeight() {
+        var iframe = document.getElementById('news_iframe');
+        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        var contentHeight = iframeDocument.body.scrollHeight;
+        iframe.style.height = contentHeight + 'px';
+    }
+
+    $(document).ready(function() {
+        App.init();
+        adjustIframeHeight(); // 초기에 함수 호출
+    });
+
+    // iframe 내용이 로드될 때마다 호출
+    function iframeLoaded() {
+        adjustIframeHeight();
+    }
+</script>
+
+
 </head>
 <body data-spy="scroll" data-target="#header-navbar" data-offset="71">
 <div id="page-container" class="wrap">
@@ -406,8 +428,8 @@
                                 </div>
                                 <div class="sub_plus"><span></span><span></span></div>
                                 <div class="depth st3">
-                                    <a href="about.html#about_7">오시는 길</a>
-                                    <a href="javascript:alert('준비중 입니다.');">상담문의</a>
+                                    <a href="contact.html#contact_1">오시는 길</a>
+                                    <a href="contact.html#contact_2">상담문의</a>
                                 </div>
                             </div>
                             <!-- banner -->
@@ -591,7 +613,7 @@
         
     </div>
     <!-- END contents //-->
-    
+    https://smilesquare.tistory.com/category/보도자료
       <!--// footer -->
       <div class="footer">
         <div>
