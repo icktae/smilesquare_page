@@ -249,6 +249,12 @@
                 justify-content: space-between;
                 align-items: center;
             }
+            .privacy{
+                display:contents;
+                text-align: left; 
+                width: 90%;
+                /* align-items: center; */
+            }
 
             
             /* 이름과 전화번호 입력 요소 너비 설정 */
@@ -260,13 +266,45 @@
             #message{
                 width: 76%;
             }
+            #privacy{
+                width: 90%;
+            }
+
+             /* 체크박스 스타일 지정 */
+            .privacy label {
+                display: flex;
+                align-items: center;
+            }
+
+            .privacy input[type="checkbox"] {
+                margin-right: 5px;
+            }
+       
+            /* 테이블 스타일 지정 */
+            table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                    text-align: center; /* 테이블을 가운데 정렬 */
+                }
+
+                table th, table td {
+                    border: 1px solid #ccc;
+                    padding: 8px;
+                    font-weight: bold; /* 텍스트를 볼드로 표시 */
+                }
+
+                table th {
+                    background-color: #f2f2f2;
+                }
         </style>
-        <script type="text/javascript">
+         <script type="text/javascript">
             function check() {
                 var name = document.getElementById("name").value;
                 var phonenumber = document.getElementById("phone").value;
                 var email = document.getElementById("email").value;
                 var message = document.getElementById("message").value;
+                var privacyCheckbox = document.getElementById("privacyCheckbox");
 
                 if (name.trim() === "") {
                     alert("성함을 입력해주세요.");
@@ -298,6 +336,11 @@
                     document.getElementById("message").focus();
                     return false;
                 }
+                
+                if (!privacyCheckbox.checked) {
+                    alert("[필수] 개인정보 수집 및 이용 동의에 체크해주세요.");
+                    return false;
+                }
 
                 // 이메일 전송이 성공한 경우에 메시지를 출력합니다.
                 alert("문의 완료되었습니다. 빠른 시일 내 연락드리겠습니다.");
@@ -310,6 +353,7 @@
                
             }
         </script>
+
         <div id="contact_2" class="product mt70">
             <h1>상담문의  <p>&nbsp;</p>  <p>&nbsp;</p></h1>
             <p class="sub_con">
@@ -338,7 +382,33 @@
                     <label for="message">문의 내용:</label><br>
                     <textarea id="message" name="message" rows="6" cols="200" required></textarea>
                 </div>
-                    <br>
+                    <br>&nbsp;&nbsp;
+                    <div class="privacy">
+                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" id="privacyCheckbox" required>
+                            <strong>[필수] 개인정보 수집 및 이용 동의</strong>
+                        </label>
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>항목</th>
+                                    <td>이름, 연락처, 이메일 주소</td>
+                                </tr>
+                                <tr>
+                                    <th>수집 · 이용목적</th>
+                                    <td>창업 / 구매상담</td>
+                                </tr>
+                                <tr>
+                                    <th>보유 · 이용기간</th>
+                                    <td>접수 기간 및 상담 후 3년</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><br>· 회사는 다음과 같이 개인정보를 수집 및 이용하며, 수집한 개인정보는 상담 및 서비스를 위해 활용 합니다.
+                            <br>· 고객은 본 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다.
+                            <br>· 다만, 동의 거부 시 창업 비용 문의/상담 등 서비스 이용에 제한이 있을 수 있습니다.<br>&nbsp;&nbsp;</p>
+                    </div>
                     <input type="submit" value="문의하기">
                 </form>
                
