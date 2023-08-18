@@ -3,36 +3,36 @@
 
 <!-- Mirrored from smilesquare.net/m/about.asp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 31 Jul 2023 01:58:17 GMT -->
 <head>
-	<title>SMILE SQUARE - Let's make things better</title>
-	    <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="title" content="스크린야구왕" />
-	<meta name="author" content="스크린야구왕" />
-	<meta name="keywords" content="스크린야구왕" />
+   <title>SMILE SQUARE - Let's make things better</title>
+       <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta name="title" content="스크린야구왕" />
+   <meta name="author" content="스크린야구왕" />
+   <meta name="keywords" content="스크린야구왕" />
     <meta name="description" content="스크린야구왕 - MAKE A NEW START!" />
     <meta name="format-detection" content="telephone=no" />
     <meta property="og:type" content="website" />
-	<meta property="og:image" content="../../www.sbbk.co.kr/images/opengraph.jpg" />
-	<meta property="og:title" content="스크린야구왕" />
-	<meta property="og:locale" content="ko_KR" />
-	<meta property="og:description" content="스크린야구왕 - MAKE A NEW START!" />
-	<meta property="og:url" content="http://www.sbbk.co.kr/" />
+   <meta property="og:image" content="../../www.sbbk.co.kr/images/opengraph.jpg" />
+   <meta property="og:title" content="스크린야구왕" />
+   <meta property="og:locale" content="ko_KR" />
+   <meta property="og:description" content="스크린야구왕 - MAKE A NEW START!" />
+   <meta property="og:url" content="http://www.sbbk.co.kr/" />
 
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
     <!-- BEGIN Touch icon -->
-	<link rel="apple-touch-icon-precomposed" href="../images/ticon.png" />
+   <link rel="apple-touch-icon-precomposed" href="../images/ticon.png" />
     <!-- END Touch icon -->
     
     <!--  BASE CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-	<link href="../fonts/fonts.min.css" rel="stylesheet" />
-	<link href="../css/swiper.min.css" rel="stylesheet" />
-	<link href="../css/m_default.css" rel="stylesheet" />
-	<link href="../css/responsive.min.css" rel="stylesheet" />
-	<!--  END BASE CSS  -->
-	
-	<!--  BASE JS  -->
-	<script src="../js/jquery-1.9.1.min.js"></script>
+   <link href="../fonts/fonts.min.css" rel="stylesheet" />
+   <link href="../css/swiper.min.css" rel="stylesheet" />
+   <link href="../css/m_default.css" rel="stylesheet" />
+   <link href="../css/responsive.min.css" rel="stylesheet" />
+   <!--  END BASE CSS  -->
+   
+   <!--  BASE JS  -->
+   <script src="../js/jquery-1.9.1.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/jquery.paroller.min.js"></script>
     <script src="../js/scrollMonitor.js"></script>
@@ -264,22 +264,22 @@
         <script type="text/javascript">
             function check() {
                 var name = document.getElementById("name").value;
-                var phonenumber = document.getElementById("phonenumber").value;
+                var phonenumber = document.getElementById("phone").value;
                 var email = document.getElementById("email").value;
                 var message = document.getElementById("message").value;
-    
+
                 if (name.trim() === "") {
                     alert("성함을 입력해주세요.");
                     document.getElementById("name").focus();
                     return false;
                 }
-    
+
                 if (phonenumber.trim() === "") {
                     alert("전화번호를 입력해주세요.");
-                    document.getElementById("phonenumber").focus();
+                    document.getElementById("phone").focus();
                     return false;
                 }
-    
+
                 if (email.trim() === "") {
                     alert("이메일을 입력해주세요.");
                     document.getElementById("email").focus();
@@ -292,17 +292,22 @@
                         return false;
                     }
                 }
-    
+
                 if (message.trim() === "") {
                     alert("문의 내용을 입력해주세요.");
                     document.getElementById("message").focus();
                     return false;
                 }
-                document.getElementsByName("frAttachFiles")[0].onload = function() {
-                    alert("이메일 전송이 완료되었습니다. 감사합니다!");
-                };
-                
+
+                // 이메일 전송이 성공한 경우에 메시지를 출력합니다.
+                alert("문의 완료되었습니다. 빠른 시일 내 연락드리겠습니다.");
+
+                // 페이지 리로드
+                setTimeout(function() {
+                    location.reload();
+                }, 1000); // 1초 후에 페이지 리로드
                 return true;
+               
             }
         </script>
         <div id="contact_2" class="product mt70">
