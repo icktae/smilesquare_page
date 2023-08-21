@@ -506,10 +506,13 @@ h6{font-size:16px}
 .business>p{width:100%; margin:30px auto}
 
 .bg_prod{position:relative; width:100%; height:500px}
-.bg_prod.bg_1{background:url(../images/bg_business_1.jpg) no-repeat top center; background-size:cover}
+.bg_prod.bg_1{background:url(../images/rndimg.jpg) no-repeat top center; background-size:cover}
 .bg_prod.bg_2{background:url(../images/bg_business_2.jpg) no-repeat top center; background-size:cover}
 .bg_prod.bg_3{background:url(../images/bg_business_3.jpg) no-repeat top center; background-size:cover}
 .bg_prod.bg_4{background:url(../images/bg_business_4.jpg) no-repeat top center; background-size:cover}
+.bg_prod.bg_5{background:url(../images/OWLCAM.jpg) no-repeat top center; background-size:cover}
+.bg_prod.bg_6{background:url(../images/물리엔진.jpg) no-repeat top center; background-size:cover}
+.bg_prod.bg_7{background:url(../images/3D공간모델링.jpg) no-repeat top center; background-size:cover}
 .bg_prod .blank{padding:0 30px; box-sizing:border-box}
 .bg_prod .blank>div{background:#fff; width:100%; height:50px; margin:0 auto}
 .bg_prod .business_btn{position:absolute; bottom:30px; width:100%; margin:0 auto; text-align:center}
