@@ -18,12 +18,12 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 /* scroll top btn*/
 .btn_top{
     position:fixed; bottom:10px; right:10px; z-index:999; text-decoration:none; text-align:center; color:#fff;
-    width:40px; height:40px; line-height:40px; border-radius:50%; background:#f5392a;
+    width:40px; height:40px; line-height:40px; border-radius:50%; background:#723A98;
 }
 .btn_top i{line-height:38px; color:#fff}
 .fade{opacity:0; transition: all 0.3s ease; pointer-events:none; bottom:100px}
 .fade.in{opacity:1; transition: all 0.3s ease; pointer-events:visible; bottom:10px}
-.btn_top:hover{background:#723A98}
+.btn_top:hover{background:#B887DA}
 
 .hr{display:block; width:100%; height:1px; background:#e5e5e5}
 
