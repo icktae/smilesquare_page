@@ -531,12 +531,11 @@ h6{font-size:16px}
 /* .contact{position:relative; width:100%; margin:0 auto; text-align:center} */
 .contact .my-paroller{position:absolute; z-index:9; top:100px; right:-150px; width:515px; height:469px; pointer-events:none}
 .contact .about_title h1{font-size:60px; font-weight:500; color:#222}
-.contact .about_title>div{width:1200px; margin:20px auto; height:55px}
+.contact .about_title>div{width:100%; justify-content: center; margin:20px auto; height:55px}
 .contact .about_title>div>div{float:left; width:100%; box-sizing:border-box}
 .contact .con_phone{position:relative;  padding-top:30px; text-align:center; font-size:30px}
 .contact .con_phone span{font-size:38px; font-weight:700; color:#222; vertical-align:middle}
 /* .contact .con_addr{padding-right:30%; padding-bottom:1px; text-align:right; color:#777} */
-
 .contact .con_phone p{text-align:center; color:#777}
 
 .contact .contact_bg{background:url(../images/map_bg.jpg) no-repeat center; height:330px}
@@ -718,6 +717,8 @@ h6{font-size:16px}
 .tabs_con_wrap .indoor8{background:url(../images/tabs_bg_img_8.jpg) no-repeat top; height:700px}
 .tabs_con_wrap .indoor9{background:url(../images/tabs_bg_img_9.jpg) no-repeat top; height:700px}
 .tabs_con_wrap .indoor10{background:url(../images/tabs_bg_img_9.jpg) no-repeat top; height:700px}
+
+.tabs_con_wrap .smile{background:url(../images/tabs_bg_img_5.jpg) no-repeat top; height: 700;}
 
 .tabs_con_wrap .vr1{background:url(../images/tabs_bg_img_21.jpg) no-repeat top; height:700px}
 .tabs_con_wrap .vr2{background:url(../images/tabs_bg_img_22.jpg) no-repeat top; height:700px}
