@@ -544,24 +544,12 @@ h6{font-size:16px}
     transition: border-bottom-color 1s ease-in-out;
 }
 
-/* 밑줄 애니메이션 효과 설정 */
-.swiper-container.product_menu .swiper-slide.active a::before {
-    content: "";
-    position: absolute;
-    bottom: -2.5px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #723A98;
-    transition: width 1s ease-in-out;
+.product_menu li.active a {
+    position: relative;
+    border-bottom: 1px solid #723A98;
+    font-weight: bold;
+    transition: border-bottom-color 1s ease-in-out;
 }
-
-/* 밑줄 애니메이션 효과 활성화 시 */
-.swiper-container.product_menu .swiper-slide.active a:hover::before,
-.swiper-container.product_menu .swiper-slide.active a:focus::before {
-    width: 100%;
-}
-
 
 
 
