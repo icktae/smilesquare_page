@@ -70,13 +70,27 @@
 <div class="wrap">
             <!--// GNB area -->
         <div class="head">
+             <script>
+            var originalSrc = "images/스마일스퀘어_logo_white.png"; // 원래 이미지의 경로
+            function changeLogo() {
+                var logoImage = document.getElementById("logoImage");
+                logoImage.src = "images/스마일스퀘어_logo.png"; // 새 이미지의 경로를 지정
+                logoImage.alt = "New Logo Alt Text"; // 새로운 alt 텍스트 지정 (선택 사항)
+            }
+            
+            function restoreLogo() {
+                var logoImage = document.getElementById("logoImage");
+                logoImage.src = originalSrc; // 원래 이미지로 복원
+                logoImage.alt = "SMILE SQUARE cI"; // alt 텍스트 복원 (선택 사항)
+            }
+            </script>
             <div class="head_wrap">
                 <div class="head_ci">
-                    <a href="index.html"><img src="images/스마일스퀘어_logo_white.png" alt="SMILE SQUARE cI"></a>
+                    <a href="index.html"><img src="images/스마일스퀘어_logo_white.png" alt="SMILE SQUARE cI" id="logoImage"></a>
                 </div>
             </div>
             <!--// GNB -->
-            <div class="dropdown-hover">
+            <div class="dropdown-hover" onmouseover="changeLogo()"  onmouseout="restoreLogo()">
 
                 <div>
                     <div>
