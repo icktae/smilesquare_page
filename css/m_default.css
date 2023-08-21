@@ -281,9 +281,10 @@ h6{font-size:16px}
 .visual_wrap .visual_slo2{position:relative; top:170px; font-size:20px; color:#fff; text-shadow:7px 7px 10px rgba(0,0,0,0.2)}
 
 .visual.sub_1{background:url(../images/visual_top_1.jpg) no-repeat top center fixed; height:500px}
-.visual.sub_2{background:url(../images/visual_top_2.jpg) no-repeat top center fixed; height:500px}
-.visual.sub_3{background:url(../images/visual_top_3.jpg) no-repeat top center fixed; height:500px}
-.visual.sub_4{background:url(../images/visual_top_4.jpg) no-repeat top center fixed; height:500px}
+.visual.sub_2{background:url(../images/contact_top.jpg) no-repeat top center fixed; height:500px}
+.visual.sub_3{background:url(../images/visual_top_2.jpg) no-repeat top center fixed; height:500px}
+.visual.sub_4{background:url(../images/visual_top_3.jpg) no-repeat top center fixed; height:500px}
+.visual.sub_5{background:url(../images/technology_top.jpg) no-repeat top center fixed; height:500px}
 
 .visual_wrap .visual_sub1{position:relative; top:180px; font-size:80px; font-weight:400; color:#fff; letter-spacing:-3px; text-shadow:7px 7px 10px rgba(0,0,0,0.2)}
 .visual_wrap .visual_sub2{position:relative; top:170px; font-size:20px; color:#fff; text-shadow:7px 7px 10px rgba(0,0,0,0.2)}
