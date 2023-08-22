@@ -361,19 +361,20 @@ h6{font-size:16px}
 .sub_technology p{width:70%; text-align:left}
 .sub .technology_obj{position:absolute; bottom:-70px; right:0; width:330px}
 
-
+.biz_con_mypro {font-size: 12px; color : #ffffff}
 
 /* Business */
 .biz{position:relative; background:#000; height:500px}
 .biz .swiper-container{position:relative; width:100%; height:500px}
 .biz .swiper-pagination-bullet-active{background:#723A98}
 .biz .swiper-slide{text-align:center; height:100%}
-.biz .biz_txt{position:absolute; z-index:1; top:100px; width:100%}
+.biz .biz_txt{color:#ffffff; position:absolute; z-index:1; top:100px; width:100%}
 .biz .biz_txt h5{color:#fff}
 .biz .biz_product{font-size:48px; color:#fff}
 .biz .biz_con{width:80%; font-size:14px; line-height:20px; margin:20px auto; color:#fff}
 .biz .biz_btn{position:absolute; z-index:2; top:300px; width:100%; text-align:center}
 .biz .biz_btn a{
+    top:85px;
     position:relative; display:inline-block; width:180px; height:50px; line-height:50px; color:#fff; text-align:center; font-size:16px;
     border:1px solid #fff; transition:all 0.3s ease; overflow:hidden;
 }
